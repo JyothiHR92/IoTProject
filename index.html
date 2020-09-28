@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Temaparature and humidity</title>
+        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>"
+        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+        <script src="./app.js"></script>
+        <script src="./bootstrap.min.js"></script>
+        <script src="./bootstrap.min.js.map"></script>
+        <script src="./draw.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    </head>
+    <body>
+        <h1 id="iotDevicedata">iotdevice data</h1>
+        <!--button id="loadButton">load</button>-->
+        <!--<div style="margin : 100px;">-->
+        
+            <button id="loadButton" class="btn-primary btn" onclick="load();" >Load Table</button>
+            <div>
+                <table class="table" id="table">
+                    <thead>
+                      <tr>
+                        <th data-field="temp">Temperature</th>
+                        <th data-field="hum">Humidity</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div>
+            <button id="loadgraph" class="btn-primary btn" onclick="loadGraph();">Load Graph</button>
+            <canvas id="mycanvas" width="800" height="480">
+                This is my fallback content.
+            </canvas>
+            
+            </div>
+            
+        
+        <!--<script src="./app.js"></script>-->
+        
+
+ 
+        
+ </body>
+    
+</html>
